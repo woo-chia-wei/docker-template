@@ -1,5 +1,5 @@
 # Instruction
-### Docker with jupyter notebook (01-docker-jupyter)
+## Docker with jupyter notebook (See folder 01-docker-jupyter)
 
 Required files:
  - **data/iris-dataset.csv** - Iris flower CSV dataset
@@ -20,7 +20,7 @@ Open command prompt in this and below scripts to build image and run container r
 
 Copy the provided jupyter URL with token to access `http://127.0.0.1:8888/tree`
 
-### Docker with console application
+## Docker with console application (See folder 02-docker-console-app)
 
 Required files:
  - **calculate_primes.py** - console application that can print first N primes
