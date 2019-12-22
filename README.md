@@ -13,7 +13,7 @@ Required files:
 `EXPOSE 8888`  
 `CMD ["jupyter","notebook","--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]`
 
-Open command prompt in this and below scripts to build image and run container respectively:
+Open command prompt under this folder and below scripts to build image and run container respectively:
 
 `docker build -t docker-jupyter .`  
 `docker container run -p 8888:8888 docker-jupyter`
@@ -32,7 +32,7 @@ Required files:
 `RUN pip install tqdm`  
 `ENTRYPOINT ["python", "calculate_primes.py"]`
 
-Open command prompt in this and below scripts to build image and run container respectively:
+Open command prompt under this folder and below scripts to build image and run container respectively:
 
 `docker build -t docker-consoleapp .`  
 `docker container run docker-consoleapp`
@@ -53,7 +53,7 @@ Required files:
 `EXPOSE 5000`  
 `CMD ["python","app.py"]`
 
-Open command prompt in this and below scripts to build image and run container respectively:
+Open command prompt under this folder and below scripts to build image and run container respectively:
 
 `docker build -t docker-restapi .`  
 `docker container run -p 5000:5000 docker-restapi`
