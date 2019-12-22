@@ -45,12 +45,12 @@ Required files:
  - **app.py** - flask backend application that can get first N primes
  - **Dockerfile** - docker file with below scripts
 
-`FROM python:3.7.3-slim`
-`WORKDIR /project`
-`COPY . /project`
-`RUN pip install Flask`
-`RUN pip install flask-cors`
-`EXPOSE 5000`
+`FROM python:3.7.3-slim`  
+`WORKDIR /project`  
+`COPY . /project`  
+`RUN pip install Flask`  
+`RUN pip install flask-cors`  
+`EXPOSE 5000`  
 `CMD ["python","app.py"]`
 
 Open command prompt in this and below scripts to build image and run container respectively:
