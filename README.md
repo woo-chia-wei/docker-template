@@ -6,11 +6,11 @@ Required files:
  - **iris-virutalization.ipynb** - jupyter notebook with EDA
  - **Dockerfile** - docker file with below scripts
 
-`FROM python:3.7.3-slim`
-`WORKDIR /project`
-`COPY . /project`
-`RUN pip install pandas jupyter`
-`EXPOSE 8888`
+`FROM python:3.7.3-slim`  
+`WORKDIR /project`  
+`COPY . /project`  
+`RUN pip install pandas jupyter`  
+`EXPOSE 8888`  
 `CMD ["jupyter","notebook","--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]`
 
 Open command prompt in this and below scripts to build image and run container respectively:
@@ -26,10 +26,10 @@ Required files:
  - **calculate_primes.py** - console application that can print first N primes
  - **Dockerfile** - docker file with below scripts
 
-`FROM python:3.7.3-slim`
-`WORKDIR /project`
-`COPY . /project`
-`RUN pip install tqdm`
+`FROM python:3.7.3-slim`  
+`WORKDIR /project`  
+`COPY . /project`  
+`RUN pip install tqdm`  
 `ENTRYPOINT ["python", "calculate_primes.py"]`
 
 Open command prompt in this and below scripts to build image and run container respectively:
