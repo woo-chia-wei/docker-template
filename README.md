@@ -38,3 +38,24 @@ Open command prompt in this and below scripts to build image and run container r
 `docker container run docker-consoleapp`
 
 The `tqdm` module doesnt work well from the output from docker but this example is to demonstrate how to install extra dependencies when setup docker
+
+## Docker with REST API (See folder 03-docker-rest-api)
+
+Required files:
+ - **app.py** - flask backend application that can get first N primes
+ - **Dockerfile** - docker file with below scripts
+
+`FROM python:3.7.3-slim`
+`WORKDIR /project`
+`COPY . /project`
+`RUN pip install Flask`
+`RUN pip install flask-cors`
+`EXPOSE 5000`
+`CMD ["python","app.py"]`
+
+Open command prompt in this and below scripts to build image and run container respectively:
+
+`docker build -t docker-restapi .`  
+`docker container run -p 5000:5000 docker-restapi`
+
+Use API client tool like Postman to call GET API `http://127.0.0.1:5000/api/primes?N=1000` for first 1000 primes.
